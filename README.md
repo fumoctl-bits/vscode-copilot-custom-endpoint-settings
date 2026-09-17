@@ -22,7 +22,7 @@ Based on the VS Code docs, here's the full set of model-level options you can ad
 
 **On video and audio:** There is **no** `audio` or `video` option in the current configuration. The only non-text modality flag is `vision` (image input). VS Code's chat input doesn't currently support attaching or sending video/audio content to models, so even if your endpoint could accept them, there's no way to declare or use that capability through the custom endpoint config. You're limited to text + images (via `vision: true`).
 
-Example
+Example kodekloud kodekey
 ```
 [
 	{
