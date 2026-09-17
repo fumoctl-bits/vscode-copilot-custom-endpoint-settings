@@ -1,0 +1,1 @@
+# vscode-copilot-custom-endpoint-settings
