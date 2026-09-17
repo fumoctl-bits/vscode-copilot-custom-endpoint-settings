@@ -9,7 +9,7 @@ Based on the VS Code docs, here's the full set of model-level options you can ad
 | `apiType` | Per-model override: `chat-completions`, `responses`, or `messages` |
 | `toolCalling` | `true` if the model supports tool calling (required for the model to appear in the picker) |
 | `vision` | `true` if the model supports **image** inputs |
-| `maxInputTokens` / `maxOutputTokens` | Token limits |
+| `maxInputTokens` / `maxOutputTokens` | Token limits (input + output must fit within the models context so look them up) |
 | `contextWindow` | Full context window (input + output); lets you omit `maxInputTokens` |
 | `editTools` | Array: `find-replace`, `multi-find-replace`, `apply-patch`, `code-rewrite` |
 | `thinking` | `true` if the model has thinking/reasoning capabilities |
@@ -42,7 +42,7 @@ Example kodekloud kodekey
 					"high",
 					"max"
 				],
-				"maxInputTokens": 900000,
+				"contextWindow": 1040000,
 				"maxOutputTokens": 128000
 			}
 		],
