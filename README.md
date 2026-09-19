@@ -54,3 +54,14 @@ Example kodekloud kodekey
 	}
 ]
 ```
+## Note: Custom endpoints disable web search features so add a websearch mcp, i use rivalsearch
+```
+{
+  "servers": {
+    "rival-search": {
+      "type": "http",
+      "url": "https://RivalSearchMCP.fastmcp.app/mcp"
+    }
+  }
+}   
+```
