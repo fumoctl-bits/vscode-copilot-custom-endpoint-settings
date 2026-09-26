@@ -26,9 +26,9 @@ Example kodekloud kodekey
 ```
 [
 	{
-		"name": "KodeKloud AI",
+		"name": "KodeKloud AI Completions",
 		"vendor": "customendpoint",
-		"apiKey": "lmao",
+		"apiKey": "${input:chat.lm.secret.71bbaf05}",
 		"apiType": "chat-completions",
 		"models": [
 			{
@@ -48,6 +48,36 @@ Example kodekloud kodekey
 		],
 		"settings": {
 			"zai/glm-5.3-flash": {
+				"reasoningEffort": "max"
+			}
+		}
+	},
+	{
+		"name": "KodeKloud AI Responses",
+		"vendor": "customendpoint",
+		"apiKey": "${input:chat.lm.secret.38177f5c}",
+		"apiType": "responses",
+		"models": [
+			{
+				"id": "gpt-6-luna",
+				"name": "GPT 6 Luna",
+				"url": "https://api.ai.kodekloud.com/v1/responses",
+				"toolCalling": true,
+				"vision": true,
+				"supportsReasoningEffort": [
+					"none",
+					"low",
+					"medium",
+					"high",
+					"xhigh",
+					"max"
+				],
+				"contextWindow": 1040000,
+				"maxOutputTokens": 128000
+			}
+		],
+		"settings": {
+			"gpt-6-luna": {
 				"reasoningEffort": "max"
 			}
 		}
